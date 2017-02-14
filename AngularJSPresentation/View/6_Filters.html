@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Scripts/Directives.ctrl.js"></script>
+    <script>
+
+        var myapp = angular.module('myapp', ['myDirectives'])
+
+        myapp.controller('ctrl', function ($scope) {
+            $scope.firstName = "First Name";
+            $scope.lastName = "Last Name";
+        });
+
+    </script>
+</head>
+<body>
+    <div ng-app="myapp">
+        <div ng-controller="ctrl">
+            First Name: <input type="text" ng-model="firstName" />
+            Last Name: <input type="text" ng-model="lastName" />
+
+            <p> Name {{firstName +' '+ lastName | uppercase}} </p>
+
+        </div>
+
+        <div ng-controller="dirCtrl">
+            <p>Search: <input type="text" ng-model="test"></p>
+            <ul>
+                <li ng-repeat="obj in names | filter:test | orderBy: 'country'">
+                    {{(obj.name | uppercase)+': '+obj.country}}
+                </li>
+            </ul>
+        
+    </div>
+    </div>
+</body>
+</html>

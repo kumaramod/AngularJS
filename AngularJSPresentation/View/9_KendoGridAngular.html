@@ -1,0 +1,152 @@
+﻿<!--<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Kendo UI Snippet</title>
+
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.rtl.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.default.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.default.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.mobile.all.min.css">
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2015.1.429/js/kendo.all.min.js"></script>
+</head>
+<body>
+    <div id="gview"></div>
+    <script>
+        $(document).ready(function () {
+            $("#gview").kendoGrid({
+                allowCopy: true,
+                pageSize: 2,
+                columns: [
+                    {
+                        field: "FirstName",
+                        title: "First Name"
+                    },
+                    {
+                        field: "LastName",
+                        title: "Last Name"
+                    }
+                ],
+                dataSource: [
+                    { FirstName: "Amod", LastName: "Kumar" },
+                    { FirstName: "Raju", LastName: "Singh" },
+                    { FirstName: "Shyam", LastName: "Patel" },
+                    {FirstName:"AbhiShek", LastName: "Srivastava"}
+                ]
+            });
+        });
+    </script>
+</body>
+</html>-->
+
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Kendo UI Snippet</title>
+
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.rtl.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.default.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.default.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.mobile.all.min.css">
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2015.1.429/js/angular.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2015.1.429/js/kendo.all.min.js"></script>
+</head>
+<body>
+
+    <div ng-app="app" ng-controller="MyCtrl">
+        <label>
+            Select mode: <select kendo-dropdownlist ng-model="gridOptions.selectable">
+                <option value="row">Row</option>
+                <option value="cell">Cell</option>
+                <option value="multiple, row">Multiple, row</option>
+                <option value="multiple, cell">Multiple, cell</option>
+            </select>
+        </label>
+
+        <div kendo-grid k-options="gridOptions" k-rebind="gridOptions.selectable"
+             k-on-change="handleChange(data, dataItem, columns)"></div>
+        <pre>
+  data: {{ data | json }}
+  columns: {{ columns | json }}
+        <span ng-show="gridOptions.selectable == 'row' || gridOptions.selectable == 'cell'">DataItem: {{ dataItem | json }}</span>
+  </pre>
+    </div>
+    <script>
+        angular.module("app", ["kendo.directives"]).controller("MyCtrl", function ($scope) {
+            var data = new kendo.data.DataSource({
+                data: [
+                  { text: "Foo", id: 1 },
+                  { text: "Bar", id: 2 },
+                  { text: "Baz", id: 3 }
+                ]
+            });
+            $scope.handleChange = function (data, dataItem, columns) {
+                $scope.data = data;
+                $scope.columns = columns;
+                $scope.dataItem = dataItem;
+            };
+            $scope.gridOptions = {
+                dataSource: data,
+                selectable: "row",
+                columns: [
+                  { field: "text", title: "Text" },
+                  { field: "id", title: "Id" }
+                ]
+            };
+        });
+    </script>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Kendo UI Snippet</title>
+
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.rtl.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.default.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.default.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.mobile.all.min.css">
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2015.1.429/js/angular.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2015.1.429/js/kendo.all.min.js"></script>
+</head>
+<body>
+
+    <div ng-app="app" ng-controller="MyCtrl">
+        <div kendo-grid k-options="gridOptions" k-ng-delay="gridOptions"></div>
+    </div>
+    <script>
+        angular.module("app", ["kendo.directives"]).controller("MyCtrl", function ($scope, $timeout) {
+            $timeout(function () {
+                $scope.gridOptions = {
+                    sortable: true,
+                    selectable: true,
+                    dataSource: [
+                      { text: "Foo", id: 1 },
+                      { text: "Bar", id: 2 },
+                      { text: "Baz", id: 3 }
+                    ],
+                    columns: [
+                      { field: "text", title: "Text" }
+                    ]
+                };
+            }, 500);
+        });
+    </script>
+</body>
+</html>

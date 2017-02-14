@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJSWithAsp.NetWebApiAndMVC", "AngularJSWithAsp.NetWebApiAndMVC\AngularJSWithAsp.NetWebApiAndMVC.csproj", "{B2C512F6-0922-42E3-AE95-BEDD58872FEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJSWithAsp.NetWebApiAndMVC.Tests", "AngularJSWithAsp.NetWebApiAndMVC.Tests\AngularJSWithAsp.NetWebApiAndMVC.Tests.csproj", "{8F5C6EAF-1738-41EE-9640-D6493E0A1CB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJSPresentation", "AngularJSPresentation\AngularJSPresentation.csproj", "{ABB50A5E-8224-4077-8FEA-A70D6A6C6590}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJSSmallStuff", "AngularJSSmallStuff\AngularJSSmallStuff.csproj", "{76611E21-FE13-45D4-AF00-2F048BE7DBF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2C512F6-0922-42E3-AE95-BEDD58872FEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2C512F6-0922-42E3-AE95-BEDD58872FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2C512F6-0922-42E3-AE95-BEDD58872FEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2C512F6-0922-42E3-AE95-BEDD58872FEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F5C6EAF-1738-41EE-9640-D6493E0A1CB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F5C6EAF-1738-41EE-9640-D6493E0A1CB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F5C6EAF-1738-41EE-9640-D6493E0A1CB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F5C6EAF-1738-41EE-9640-D6493E0A1CB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABB50A5E-8224-4077-8FEA-A70D6A6C6590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB50A5E-8224-4077-8FEA-A70D6A6C6590}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB50A5E-8224-4077-8FEA-A70D6A6C6590}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB50A5E-8224-4077-8FEA-A70D6A6C6590}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76611E21-FE13-45D4-AF00-2F048BE7DBF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76611E21-FE13-45D4-AF00-2F048BE7DBF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76611E21-FE13-45D4-AF00-2F048BE7DBF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76611E21-FE13-45D4-AF00-2F048BE7DBF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

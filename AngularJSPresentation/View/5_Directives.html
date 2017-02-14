@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Scripts/Directives.ctrl.js"></script>
+    <style>
+        .strike {
+            text-decoration: line-through;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .orange {
+            color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <div ng-app="myDirectives" ng-controller="dirCtrl">
+        <ul>
+            <li ng-repeat="obj in names|orderBy:'-country'">
+                {{obj.name+' '+obj.country}}
+            </li>
+        </ul>
+        <table>
+            <tr >
+                <th><a href="" ng-click="SortObj('name')">Name</a></th>
+                <th><a href="" ng-click="SortObj('country')">Country</a></th>
+            </tr>
+            <tr ng-repeat="obj in names|orderBy:predicate:reverse">
+                <td>{{obj.name}}</td>
+                <td>{{obj.country}}</td>
+            </tr>
+        </table>
+
+        <p ng-class="{strike: deleted, bold: important, red: error}">Map Syntax Example</p>
+        <label>
+            <input type="checkbox" ng-model="deleted">
+            deleted (apply "strike" class)
+        </label><br>
+        <label>
+            <input type="checkbox" ng-model="important">
+            important (apply "bold" class)
+        </label><br>
+        <label>
+            <input type="checkbox" ng-model="error">
+            error (apply "red" class)
+        </label>
+        <hr>
+        <p ng-class="style">Using String Syntax</p>
+        <input type="text" ng-model="style"
+               placeholder="Type: bold strike red" aria-label="Type: bold strike red">
+        <hr>
+        <p ng-class="[style1, style2, style3]">Using Array Syntax</p>
+        <input ng-model="style1"
+               placeholder="Type: bold, strike or red" aria-label="Type: bold, strike or red"><br>
+        <input ng-model="style2"
+               placeholder="Type: bold, strike or red" aria-label="Type: bold, strike or red 2"><br>
+        <input ng-model="style3"
+               placeholder="Type: bold, strike or red" aria-label="Type: bold, strike or red 3"><br>
+        <hr>
+        <p ng-class="[style4, {orange: warning}]">Using Array and Map Syntax</p>
+        <input ng-model="style4" placeholder="Type: bold, strike" aria-label="Type: bold, strike"><br>
+        <label><input type="checkbox" ng-model="warning"> warning (apply "orange" class)</label>
+    </div>
+
+    
+    <div ng-class="Test.length >= 3 ? 'orange' : 'red'">
+        Amod Kumar
+        {{Test}}
+    </div>
+    
+</body>
+</html>

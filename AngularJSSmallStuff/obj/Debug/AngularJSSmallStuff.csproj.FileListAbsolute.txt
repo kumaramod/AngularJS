@@ -1,0 +1,12 @@
+E:\Amod\psplserver2\AngularJSWithAsp.NetWebApiAndMVC\AngularJSSmallStuff\bin\AngularJSSmallStuff.dll.config
+E:\Amod\psplserver2\AngularJSWithAsp.NetWebApiAndMVC\AngularJSSmallStuff\bin\AngularJSSmallStuff.dll
+E:\Amod\psplserver2\AngularJSWithAsp.NetWebApiAndMVC\AngularJSSmallStuff\bin\AngularJSSmallStuff.pdb
+E:\Amod\psplserver2\AngularJSWithAsp.NetWebApiAndMVC\AngularJSSmallStuff\obj\Debug\AngularJSSmallStuff.csprojResolveAssemblyReference.cache
+E:\Amod\psplserver2\AngularJSWithAsp.NetWebApiAndMVC\AngularJSSmallStuff\obj\Debug\AngularJSSmallStuff.dll
+E:\Amod\psplserver2\AngularJSWithAsp.NetWebApiAndMVC\AngularJSSmallStuff\obj\Debug\AngularJSSmallStuff.pdb
+E:\Amod\GitProject\AngularJS\AngularJSSmallStuff\bin\AngularJSSmallStuff.dll.config
+E:\Amod\GitProject\AngularJS\AngularJSSmallStuff\bin\AngularJSSmallStuff.dll
+E:\Amod\GitProject\AngularJS\AngularJSSmallStuff\bin\AngularJSSmallStuff.pdb
+E:\Amod\GitProject\AngularJS\AngularJSSmallStuff\obj\Debug\AngularJSSmallStuff.csprojResolveAssemblyReference.cache
+E:\Amod\GitProject\AngularJS\AngularJSSmallStuff\obj\Debug\AngularJSSmallStuff.dll
+E:\Amod\GitProject\AngularJS\AngularJSSmallStuff\obj\Debug\AngularJSSmallStuff.pdb

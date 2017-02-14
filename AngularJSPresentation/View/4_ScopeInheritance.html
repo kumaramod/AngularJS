@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Scripts/scopeInheritance.ctrl.js"></script>
+</head>
+<body>
+    <div class="spicy">
+        <div ng-app="scopeInheritance" ng-controller="MainController">
+            <p>Good {{timeOfDay}}, {{name}}!</p>
+
+            <div ng-controller="ChildController">
+                <p>Good {{timeOfDay}}, {{name}}!</p>
+
+                <div ng-controller="GrandChildController">
+                    <p>Good {{timeOfDay}}, {{name}}!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

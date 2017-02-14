@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Kendo UI Snippet</title>
+
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.rtl.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.default.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.default.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.mobile.all.min.css">
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="../Scripts/angular.js"></script>
+    <script src="http://cdn.kendostatic.com/2015.1.429/js/kendo.all.min.js"></script>
+    
+</head>
+<body>
+
+    <!--<div id="grid"></div>-->
+    <!--<script>
+        ///How to bind only column
+        //$("#grid").kendoGrid({
+        //    columns: [ { title: "First Name", field: "firstName" },
+        //               { title: "Last Name", field: "lastName"},
+        //    { title: "Email", field: "email" } ]
+        //});
+
+
+        ///How to bind column and data
+        ///Note:- if we don't give column name then it'll take data column name as column name as in Asp.Net GridView.
+        var columnName = [{ title: "First Name", field: "firstName" },
+                       { title: "Last Name", field: "lastName" },
+            { title: "Email", field: "email" }];
+
+        var people = [{
+            firstName: "John",
+            lastName: "Smith",
+            email: "john.smith@telerik.com"
+        },
+               {
+                   firstName: "Jane",
+                   lastName: "Smith",
+                   email: "jane.smith@telerik.com"
+               },
+               {
+                   firstName: "Josh",
+                   lastName: "Davis",
+                   email: "josh.davis@telerik.com"
+               },
+               {
+                   firstName: "Cindy",
+                   lastName: "Jones",
+                   email: "cindy.jones@telerik.com"
+               }];
+
+        $("#grid").kendoGrid({
+            dataSource: people,
+            columns: columnName,
+            //By default, paging, grouping, and sorting are disabled. Scrolling is enabled by default.
+            sortable: true,
+            pageable: true,
+            filterable: true,
+            groupable:true,
+            scrollable: true,
+            //scrollable: {   //How to set virtual scroll in grid
+            //    virtual: true
+            //},
+            //sort: [{ field: "firstName", dir: "asc" }], // didn't understand the benefit of this line
+            selectable: true,
+            navigatable: true,
+            resizable: false,
+            height: 300,
+            //pageable: {
+            //    numeric: false,
+            //    previousNext: false,
+            //    input: false,
+            //    info: true,
+            //    refresh: false,
+            //    messages: {
+            //        display: "{2} items"
+            //    }
+            //},
+            toolbar: [
+                {
+                    name: "create",
+                    template: "<button type='button' focus-on='focus-first' my-nblur class='k-button' ng-click='addRow()'>Add</button>"
+                },
+                {
+                    name: "destroy",
+                    template: "<button type='button' class='k-button' ng-click='removeSelectedRows()'>Delete</button><button type='button' class='k-button' ng-click='removeSelectedRows()'>Cancel</button>"
+                }
+            ],
+            editable: {
+                confirmation: false
+            }
+        });
+        var grid = $("#grid").data("kendoGrid");
+        var grid1 = people;
+
+        grid.dataSource.data().length //(here grid is variable in which data is stored)
+        grid.dataSource.total()
+        $("#grid").data("kendoGrid").dataSource.total()  //(#grid is name of kendo grid)
+
+    </script>-->
+
+    <div ng-app="oneTimeBidingExampleApp" ng-controller="EventController">
+        
+        <div kendo-grid 
+             id="company-ed-grid" 
+             k-options="gridOptions"
+             k-on-data-binding="onDataBinding(kendoEvent)"
+             k-on-data-bound="onDataBound(kendoEvent)"
+             k-on-change="onSelection(kendoEvent)"></div>
+        <div>Name: {{name}}</div>
+    </div>
+
+    <script type="text/javascript">
+
+        angular.module('oneTimeBidingExampleApp', ["kendo.directives"]).
+controller('EventController', ['$scope', function ($scope) {
+
+
+    $scope.name = "amod";
+
+    var columnName = [{ title: "First Name", field: "firstName" },
+                     { title: "Last Name", field: "lastName", template: '<div style=color:red;>#= lastName #</div>' },
+          { title: "Email", field: "email", template: '<a href="mailto:#= email #">#= email #</a>' }];
+
+    var people = [{
+        firstName: "John",
+        lastName: "Smith",
+        email: "john.smith@telerik.com"
+    },
+           {
+               firstName: "Jane",
+               lastName: "Smith",
+               email: "jane.smith@telerik.com"
+           },
+           {
+               firstName: "Josh",
+               lastName: "Davis",
+               email: "josh.davis@telerik.com"
+           },
+           {
+               firstName: "Cindy",
+               lastName: "Jones",
+               email: "cindy.jones@telerik.com"
+           }];
+
+    $scope.gridOptions = {
+        dataSource: people,
+        columns: columnName,
+        //selectable: true,
+        selectable: 'row',
+        //selectable: 'cell',
+        //footer: true,
+        pageable: {
+            //numeric: false,
+            //messages: {
+            //    display: "{2} items"
+            //},
+            //previousNext: false,
+            //input: false,
+            //info: true,
+            //refresh: false,
+            pageSize: 4
+        },
+        sort: [{ field: "firstName", dir: "asc" }]
+
+    };
+
+    //Fired before the widget binds to its data source.
+    $scope.onDataBinding = function (ea) {
+        ea.items[0].firstName = "Amod Kumar";
+    };
+
+
+    //Fires when the grid has received data from the data source.
+    
+    $scope.onDataBound = function (kendoEvent) {
+        var grid = kendoEvent.sender;
+        var abc = grid.dataItem(grid.tbody.find(">tr:first"));
+        abc[0].lastName = "After Bound";
+
+        ////Note: if we want to select by default any row item like first then this event is good solution
+        //var grid = kendoEvent.sender;
+
+        //$timeout(function () {
+        //    try {
+        //        grid.select(kendoEvent.sender.tbody.find("tr:first"));
+        //    } catch (e) {
+        //        // user navigated away
+        //    }
+        //}, 50);
+    };
+
+    //if u want to fire on change event, u have to set selectable is true;
+    //Fires when the grid selection has changed. Fired when the user selects a table row or cell in the grid.
+    $scope.onSelection = function (Event) {
+        var abc = Event.sender;
+        var selectedRows = abc.select();
+        var selectedDataItems = [];
+        for (var i = 0; i < selectedRows.length; i++) {
+            var dataItem = abc.dataItem(selectedRows[i]);
+            selectedDataItems.push(dataItem);
+        }
+        // selectedDataItems contains all selected data items
+    };
+}]);
+
+        
+
+
+    </script>
+
+
+
+</body>
+</html>

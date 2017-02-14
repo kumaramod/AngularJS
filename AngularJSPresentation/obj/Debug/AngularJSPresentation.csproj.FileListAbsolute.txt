@@ -1,0 +1,12 @@
+E:\Amod\psplserver2\AngularJSWithAsp.NetWebApiAndMVC\AngularJSPresentation\bin\AngularJSPresentation.dll.config
+E:\Amod\psplserver2\AngularJSWithAsp.NetWebApiAndMVC\AngularJSPresentation\bin\AngularJSPresentation.dll
+E:\Amod\psplserver2\AngularJSWithAsp.NetWebApiAndMVC\AngularJSPresentation\bin\AngularJSPresentation.pdb
+E:\Amod\psplserver2\AngularJSWithAsp.NetWebApiAndMVC\AngularJSPresentation\obj\Debug\AngularJSPresentation.csprojResolveAssemblyReference.cache
+E:\Amod\psplserver2\AngularJSWithAsp.NetWebApiAndMVC\AngularJSPresentation\obj\Debug\AngularJSPresentation.dll
+E:\Amod\psplserver2\AngularJSWithAsp.NetWebApiAndMVC\AngularJSPresentation\obj\Debug\AngularJSPresentation.pdb
+E:\Amod\GitProject\AngularJS\AngularJSPresentation\bin\AngularJSPresentation.dll.config
+E:\Amod\GitProject\AngularJS\AngularJSPresentation\bin\AngularJSPresentation.dll
+E:\Amod\GitProject\AngularJS\AngularJSPresentation\bin\AngularJSPresentation.pdb
+E:\Amod\GitProject\AngularJS\AngularJSPresentation\obj\Debug\AngularJSPresentation.csprojResolveAssemblyReference.cache
+E:\Amod\GitProject\AngularJS\AngularJSPresentation\obj\Debug\AngularJSPresentation.dll
+E:\Amod\GitProject\AngularJS\AngularJSPresentation\obj\Debug\AngularJSPresentation.pdb

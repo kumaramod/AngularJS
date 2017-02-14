@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Example of Kendo Drop down list</title>
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.rtl.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.default.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.default.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.mobile.all.min.css">
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2015.1.429/js/angular.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2015.1.429/js/kendo.all.min.js"></script>
+</head>
+<body>
+    <div ng-app="app">
+        <div ng-controller="ctrlDDL">
+            <h2>{{welcome}}</h2>
+            <select kendo-drop-down-list k-option-label="'Select Item'">
+                <option>Item 1</option>
+                <option>Item 2</option>
+                <option>Item 3</option>
+                <option>Item 4</option>
+                <option>Item 5</option>
+            </select>
+        </div>
+        <div ng-controller="ctrlDDL1">
+            <h2>{{welcome}}</h2>
+            <select kendo-drop-down-list k-data-text-field="'name'" k-data-value-field="'id'" k-data-source="productDataSource" k-option-label="'Select Text'"></select>
+        </div>
+
+        <div ng-controller="ctrlDDL2">
+            <h2>{{welcome}}</h2>
+            <select kendo-drop-down-list k-options="kendoDynamicGrid" k-on-change="change(kendoEvent)"></select>
+            <p ng-show="selectedText">Selected Value= {{selectedText}}</p>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        var app= angular.module("app", ["kendo.directives"]);
+            app.controller('ctrlDDL', function ($scope) {
+            $scope.welcome = "Welcome in static Kendo Drop down list in html";
+        });
+
+        app.controller('ctrlDDL1', function ($scope) {
+            $scope.welcome = "Welcome in dynamic Kendo Drop down list in html";
+            $scope.productDataSource = [{ id: 1, name: "A" }, { id: 2, name: "B" }, { id: 3, name: "C" }, { id: 4, name: "D" }];
+        });
+
+        app.controller('ctrlDDL2', function ($scope) {
+            $scope.welcome = "Welcome in dynamic Kendo Drop down list in html IN Controller";
+            $scope.productDataSource = [{ id: 1, name: "Value1" }, { id: 2, name: "Value2" }, { id: 3, name: "Value3" }, { id: 4, name: "Value4  " }];
+            $scope.kendoDynamicGrid = {
+                dataTextField: "name",
+                dataValueField: "id",
+                dataSource: $scope.productDataSource,
+                optionLabel: "Select value",
+            };
+
+            $scope.change = function (e)
+            {
+                debugger;
+                $scope.selectedText = e.sender.text();
+            }
+        });
+    </script>
+
+</body>
+</html>
