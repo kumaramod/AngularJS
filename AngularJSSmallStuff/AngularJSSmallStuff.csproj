@@ -57,6 +57,20 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AngularRoutingConcept\ng-view\first.html" />
+    <Content Include="AngularRoutingConcept\ng-view\index.html" />
+    <Content Include="AngularRoutingConcept\ng-view\script.js" />
+    <Content Include="AngularRoutingConcept\ng-view\second.html" />
+    <Content Include="AngularRoutingConcept\ui-sampleview\about.html" />
+    <Content Include="AngularRoutingConcept\ui-sampleview\app.js" />
+    <Content Include="AngularRoutingConcept\ui-sampleview\home.html" />
+    <Content Include="AngularRoutingConcept\ui-sampleview\index.html" />
+    <Content Include="AngularRoutingConcept\ui-view\app.js" />
+    <Content Include="AngularRoutingConcept\ui-view\index.html" />
+    <Content Include="AngularRoutingConcept\ui-view\partial-about.html" />
+    <Content Include="AngularRoutingConcept\ui-view\partial-home-list.html" />
+    <Content Include="AngularRoutingConcept\ui-view\partial-home.html" />
+    <Content Include="AngularRoutingConcept\ui-view\table-data.html" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="packages.config" />
     <Content Include="WebForm1.aspx" />
