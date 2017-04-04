@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.min.js"></script>
+	<script src="script.js"></script>
+</head>
+    
+<body ng-app="angularRouting">
+    <div ng-controller="mainController">
+        <h2>AngularJS Routing Example</h2>
+        {{welcome}}
+        <p>Jump to the <a href="#first">first</a> or <a href="#second">second page</a></p>
+        <!--<form ui-view></form>-->
+        <div ng-view></div>
+    </div>
+</body>
+</html>
